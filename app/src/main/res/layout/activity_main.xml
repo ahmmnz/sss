@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:background="#121212">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="12dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center" android:background="#1E1E1E" android:padding="8dp">
+            <RadioGroup android:id="@+id/modeGroup" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal">
+                <RadioButton android:id="@+id/radioWifi" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="WiFi ADB" android:textColor="#FFF" android:checked="true" android:layout_marginEnd="16dp"/>
+                <RadioButton android:id="@+id/radioBt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Bluetooth" android:textColor="#FFF"/>
+            </RadioGroup>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/wifiLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:background="#1E1E1E" android:padding="8dp" android:layout_marginTop="8dp">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="TV: Ayarlar &gt; Sistem &gt; Hakkinda &gt; Derleme 7x tikla &gt; Gelistirici &gt; USB + Ag Hata Ayiklama AC" android:textColor="#888" android:textSize="9sp"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="4dp">
+                <EditText android:id="@+id/ipInput" android:layout_width="0dp" android:layout_weight="1" android:layout_height="40dp" android:hint="192.168.1.100" android:textColor="#FFF" android:textColorHint="#888" android:background="#2D2D2D" android:padding="8dp" android:textSize="12sp"/>
+                <Button android:id="@+id/btnWifiConnect" android:layout_width="wrap_content" android:layout_height="40dp" android:text="Baglan" android:layout_marginStart="8dp"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/btLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:background="#1E1E1E" android:padding="8dp" android:layout_marginTop="8dp" android:visibility="gone">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                <Button android:id="@+id/btnBtScan" android:layout_width="0dp" android:layout_weight="1" android:layout_height="40dp" android:text="Tara" android:layout_marginEnd="4dp"/>
+                <Button android:id="@+id/btnBtEnable" android:layout_width="0dp" android:layout_weight="1" android:layout_height="40dp" android:text="BT Ac" android:layout_marginStart="4dp"/>
+            </LinearLayout>
+            <Spinner android:id="@+id/btDeviceSpinner" android:layout_width="match_parent" android:layout_height="45dp" android:layout_marginTop="8dp" android:background="#2D2D2D"/>
+            <Button android:id="@+id/btnBtConnect" android:layout_width="match_parent" android:layout_height="45dp" android:text="Bluetooth Baglan" android:layout_marginTop="8dp" android:backgroundTint="#2196F3"/>
+        </LinearLayout>
+        <TextView android:id="@+id/statusText" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Durum: WiFi - IP gir" android:textColor="#FF9800" android:textSize="11sp" android:padding="6dp" android:background="#2D2D2D" android:layout_marginTop="8dp"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center" android:layout_marginTop="12dp">
+            <Button android:id="@+id/btnPower" android:layout_width="60dp" android:layout_height="60dp" android:text="POWER" android:textSize="9sp" android:backgroundTint="#D32F2F"/>
+            <Space android:layout_width="20dp" android:layout_height="wrap_content"/>
+            <Button android:id="@+id/btnMute" android:layout_width="60dp" android:layout_height="60dp" android:text="MUTE" android:textSize="9sp"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="center" android:layout_marginTop="16dp" android:background="#1E1E1E" android:padding="12dp">
+            <Button android:id="@+id/btnUp" android:layout_width="80dp" android:layout_height="50dp" android:text="UP"/>
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal">
+                <Button android:id="@+id/btnLeft" android:layout_width="70dp" android:layout_height="60dp" android:text="LEFT" android:textSize="10sp"/>
+                <Button android:id="@+id/btnOk" android:layout_width="70dp" android:layout_height="60dp" android:text="OK" android:backgroundTint="#FF3D00" android:layout_marginHorizontal="8dp"/>
+                <Button android:id="@+id/btnRight" android:layout_width="70dp" android:layout_height="60dp" android:text="RIGHT" android:textSize="10sp"/>
+            </LinearLayout>
+            <Button android:id="@+id/btnDown" android:layout_width="80dp" android:layout_height="50dp" android:text="DOWN"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center" android:layout_marginTop="12dp">
+                <Button android:id="@+id/btnBack" android:layout_width="0dp" android:layout_weight="1" android:layout_height="45dp" android:text="Back" android:layout_marginEnd="4dp"/>
+                <Button android:id="@+id/btnHome" android:layout_width="0dp" android:layout_weight="1" android:layout_height="45dp" android:text="Home" android:layout_marginHorizontal="4dp"/>
+                <Button android:id="@+id/btnMenu" android:layout_width="0dp" android:layout_weight="1" android:layout_height="45dp" android:text="Menu" android:layout_marginStart="4dp"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="12dp">
+            <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:background="#1E1E1E" android:padding="8dp" android:gravity="center" android:layout_marginEnd="6dp">
+                <TextView android:id="@+id/volText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="24" android:textColor="#FF3D00" android:textSize="24sp" android:textStyle="bold"/>
+                <Button android:id="@+id/btnVolUp" android:layout_width="match_parent" android:layout_height="45dp" android:text="Vol +" android:layout_marginTop="4dp"/>
+                <Button android:id="@+id/btnVolDown" android:layout_width="match_parent" android:layout_height="45dp" android:text="Vol -" android:layout_marginTop="4dp"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:background="#1E1E1E" android:padding="8dp" android:gravity="center" android:layout_marginStart="6dp">
+                <TextView android:id="@+id/chText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="7" android:textColor="#4CAF50" android:textSize="24sp" android:textStyle="bold"/>
+                <Button android:id="@+id/btnChUp" android:layout_width="match_parent" android:layout_height="45dp" android:text="Ch +" android:layout_marginTop="4dp"/>
+                <Button android:id="@+id/btnChDown" android:layout_width="match_parent" android:layout_height="45dp" android:text="Ch -" android:layout_marginTop="4dp"/>
+            </LinearLayout>
+        </LinearLayout>
+        <GridLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:columnCount="3" android:rowCount="4" android:alignmentMode="alignMargins" android:useDefaultMargins="true" android:layout_marginTop="12dp" android:background="#1E1E1E" android:padding="8dp">
+            <Button android:id="@+id/btn1" android:text="1" android:layout_width="0dp" android:layout_columnWeight="1"/>
+            <Button android:id="@+id/btn2" android:text="2" android:layout_width="0dp" android:layout_columnWeight="1"/>
+            <Button android:id="@+id/btn3" android:text="3" android:layout_width="0dp" android:layout_columnWeight="1"/>
+            <Button android:id="@+id/btn4" android:text="4" android:layout_width="0dp" android:layout_columnWeight="1"/>
+            <Button android:id="@+id/btn5" android:text="5" android:layout_width="0dp" android:layout_columnWeight="1"/>
+            <Button android:id="@+id/btn6" android:text="6" android:layout_width="0dp" android:layout_columnWeight="1"/>
+            <Button android:id="@+id/btn7" android:text="7" android:layout_width="0dp" android:layout_columnWeight="1"/>
+            <Button android:id="@+id/btn8" android:text="8" android:layout_width="0dp" android:layout_columnWeight="1"/>
+            <Button android:id="@+id/btn9" android:text="9" android:layout_width="0dp" android:layout_columnWeight="1"/>
+            <Button android:id="@+id/btnClear" android:text="C" android:layout_width="0dp" android:layout_columnWeight="1"/>
+            <Button android:id="@+id/btn0" android:text="0" android:layout_width="0dp" android:layout_columnWeight="1"/>
+            <Button android:id="@+id/btnEnter" android:text="OK" android:layout_width="0dp" android:layout_columnWeight="1" android:backgroundTint="#FF3D00"/>
+        </GridLayout>
+    </LinearLayout>
+</ScrollView>
